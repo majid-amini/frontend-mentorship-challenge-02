@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+html {
+  font-family: 'Roboto',sans-serif;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #092f79), color-stop(74%, #00feff));
+  background: linear-gradient(90deg, #020024 0%, #092f79 0%, #00feff 74%);
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e5eef3;
+  padding: 4rem 3.5rem;
+  border-radius: 1.5rem;
+}
+
+.border {
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+form {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+}
+
+form input {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  outline: none;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+form input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+form input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+form input::-ms-input-placeholder {
+  color: #ccc;
+}
+
+form input::placeholder {
+  color: #ccc;
+}
+
+.focus:focus {
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+          box-shadow: 2px 2px 2px #ccc;
+}
+
+#date_parent input {
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+#date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+label, .male-span, .female-span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: initial;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+.gender label {
+  margin: 0;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.gender input[type="radio"] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.gender input[type="radio"]:hover {
+  background-color: #fff;
+}
+
+.gender input[type="radio"]::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+  display: none;
+}
+
+.gender input[type="radio"]:checked {
+  background-color: #3498DB;
+}
+
+.gender input[type="radio"]:checked::after {
+  display: block;
+}
+
+.gender_male, .gender_female {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0.5rem 0.5rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+  padding: 1rem;
+  padding-left: 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox p {
+  width: 88%;
+  text-transform: lowercase;
+}
+
+.checkbox input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  background-color: #C2B7B7;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+}
+
+.checkbox input:hover {
+  background-color: #C2B7B7;
+}
+
+.checkbox input::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+  display: none;
+}
+
+.checkbox input:checked {
+  background-color: #3498DB;
+}
+
+.checkbox input:checked::after {
+  display: block;
+}
+
+.submit {
+  background-color: #3498DB;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  background-color: #7aabcc;
+  -webkit-box-shadow: 1px 1px 1px #383737;
+          box-shadow: 1px 1px 1px #383737;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 30rem;
+  }
+  .container form {
+    width: 25rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

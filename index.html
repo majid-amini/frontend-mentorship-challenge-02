@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>front-end-mentorship-challenge-02</title>
+</head>
+<body>
+    
+<main>
+    <!-- section class container -->
+    <section class="container">
+        <form action="#">
+            <label for="full name">full name</label>
+            <input class="focus border" required type="text" placeholder="your name">
+            <label for="email address">email address</label>
+            <input class="focus border" required type="email" placeholder="email address">
+            <label for="date of birth">date of birth</label>
+            <div class="focus" id="date_parent">   
+            <input required id="date" class="border" type="date" placeholder="DD/MM/YYYY">
+            </div>
+            <label for="gender">gender</label>
+            <div class="gender"> 
+                <div class="gender_male border">   
+                    <input  required name="gender" type="radio"  value="male" id="option1" >
+                    <label class="radio" for="option1">male</label>
+                    
+                </div><!-- class=gender_male -->  
+                <div class="gender_female border"> 
+                    <input required name="gender" type="radio"  value="female" id="option2">
+                    <label class="radio" for="option2" >female</label>
+                    
+                </div><!-- class=gender_female --> 
+            </div><!-- class=gender -->  
+            <div class="checkbox">
+                <input required type="checkbox">
+                <p>i accept the terms & conditions</p>
+            </div><!-- class=checkbox -->
+            <input class="submit border" type="submit" value="create account">
+        </form>
+    </section> <!-- end of section class=container -->
+</main>
+
+
+</body>
+</html>

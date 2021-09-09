@@ -1,0 +1,182 @@
+@import "reset.scss";
+@import 'mixins.scss';
+@import "variables.scss";
+
+body {
+ background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,47,121,1) 0%, rgba(0,254,255,1) 74%);
+}
+
+
+main {
+    min-height: 100vh;
+   @include flexBox(column,center,center);
+}
+.container {
+    width: 35rem;
+    @include flexBox(column,center,center);
+    background-color: $bgColor;
+    padding: 4rem 3.5rem;
+    border-radius: 1.5rem;
+}
+.border {
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+form {
+    width: 30rem;
+    @include flexBox (column, center, space-around)
+}
+form input {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+
+            &::placeholder {
+                color: $lightGray;
+            }
+}
+.focus:focus {
+    box-shadow: 2px 2px 2px $lightGray;
+}
+
+#date_parent input {
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    
+}
+
+#date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    background: transparent;
+    @include widthHeight(100%, 100%, 0, 0);
+    bottom: 0;
+    left: 0;
+    text-transform: uppercase;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+label, .male-span, .female-span {
+    @include font(1.3rem, bold);
+    margin: 0.5rem;
+}
+
+.gender {
+    @include flexBox(row, space-between, center);
+    @include widthHeight(100%, initial,0.5rem 0, 0.5rem 0);
+}
+.gender label {
+    margin: 0;
+    color: $lightGray;
+    cursor: pointer;
+}
+.gender input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: $whiteColor;
+    border: 1px solid $lightGray;
+    border-radius: 50%;
+    transition: 0.3s;
+    outline: none;
+    @include flexBox(row, center, center);
+    cursor: pointer;
+
+                        &:hover{
+                            background-color: $whiteColor;    
+                        }
+                        &::after{
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f00c";
+                            @include font (1rem, 900);
+                            color: $whiteColor;
+                            display: none;
+                        }
+                        &:checked {
+                            background-color: $blueColor;
+                        }
+                        &:checked::after {
+                            display: block;   
+                        }
+}
+.gender_male,.gender_female {
+   @include flexBox (row, space-around, center);
+   @include widthHeight (40%, 100%, 1rem 0.5rem, 0.5rem 0.5rem);
+    background-color: $whiteColor;
+    position: relative;
+}
+.checkbox {
+    @include flexBox(row, space-around, center);
+    @include font (1.3rem, bold);
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+    padding: 1rem;  
+    padding-left: 0;
+    position: relative; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+        p{
+            width: 88%;
+            text-transform: lowercase;
+           
+        } 
+        input {
+            @include flexBox(row, center, center);
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            height: 2rem;
+            width: 2rem;
+            background-color: $lightBrown;
+            border-radius: 0.5rem;
+            transition: 0.3s;
+            outline: none;
+            
+                        &:hover{
+                            background-color: $lightBrown;    
+                        }
+                        &::after{
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f00c";
+                            @include font (1rem, 900);
+                            color: $whiteColor;
+                            display: none;
+                           
+                        }
+                        &:checked {
+                            background-color: $blueColor;
+                        }
+                        &:checked::after {
+                            display: block;   
+                        }
+       }  
+
+}
+
+.submit {
+    background-color: $blueColor;
+    cursor: pointer;
+    transition: 0.3s;
+                &:hover {
+                    background-color: $lightBlue;
+                    box-shadow: 1px 1px 1px $darkGray;
+                    
+                }
+}
+@media screen and (max-width: 375px){  
+    .container {
+        width: 30rem;
+                 form {
+                     width: 25rem;
+                 }
+    }
+    
+}
